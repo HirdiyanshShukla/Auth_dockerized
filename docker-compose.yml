@@ -1,0 +1,27 @@
+# version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./serveAPI
+    volumes:
+      - ./serveAPI:/app
+    ports:
+      - "8000:8000"
+    networks:
+      - appnet
+
+  frontend:
+    build:
+      context: ./my-react-app
+      args:
+        - VITE_API_URL=http://localhost:8000/accounts
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - appnet
+
+networks:
+  appnet:
