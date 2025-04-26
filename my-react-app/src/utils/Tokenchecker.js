@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseURL = 'https://your-backend-app-name.onrender.com/'; // Django base
+const baseURL = 'https://auth-dockerized-1.onrender.com/'; // Django base
 
 const axiosInstance = axios.create({
   baseURL,
