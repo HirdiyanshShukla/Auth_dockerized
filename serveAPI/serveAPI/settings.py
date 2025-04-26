@@ -230,6 +230,9 @@ SIMPLE_JWT = {
 #     "http://127.0.0.1:9000",
 # ]
 
+ALLOWED_HOSTS = ['auth-dockerized-1.onrender.com', 'yourdomain.com', 'localhost', '127.0.0.1']
+
+
 CORS_ALLOW_ALL_ORIGINS = True   
 
 
