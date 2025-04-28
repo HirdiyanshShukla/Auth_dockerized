@@ -232,6 +232,9 @@ SIMPLE_JWT = {
 
 ALLOWED_HOSTS = ['auth-dockerized-1.onrender.com', 'yourdomain.com', 'localhost', '127.0.0.1']
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://auth-dockerized-1.onrender.com",
+]
 
 CORS_ALLOW_ALL_ORIGINS = True   
 
